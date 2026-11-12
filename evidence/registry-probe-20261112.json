@@ -1,0 +1,459 @@
+[
+ {
+  "name": "ac.inference.sh/mcp",
+  "url": "https://api.inference.sh/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://api.inference.sh/.well-known/oauth-protected-resource\", scope=\"agents:read apps:read conversations:read files:read flows:read datastores:read projects:read teams:read secrets:read credentials:read knowledge:read artifacts:read remotes:read sandboxes:read settings:read bounties:read agents:execute apps:execute flows:execute forms:execute agents:write apps:write conversations:write files:write flows:write datastores:write projects:write secrets:write credentials:write knowledge:write artifacts:write remotes:write sandboxes:write settings:write forms:write billing:read\"",
+  "note": "{\"jsonrpc\":\"2.0\",\"id\":1,\"error\":{\"code\":-32000,\"message\":\"Authentication require"
+ },
+ {
+  "name": "ac.snag/snag",
+  "url": "https://mcp.snag.ac/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://mcp.snag.ac/.well-known/oauth-protected-resource\"",
+  "note": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32001,\"message\":\"invalid or missing MCP token\""
+ },
+ {
+  "name": "ac.tandem/docs-mcp",
+  "url": "https://tandem.ac/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ac.mizan/registry",
+  "url": "https://mizan.ac/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "academy.ase/periodic-system",
+  "url": "https://ase.academy/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "academy.serviceengineer/se-ai",
+  "url": "https://api.serviceengineer.academy/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://api.serviceengineer.academy/.well-known/oauth-protected-resource\"",
+  "note": "{\"jsonrpc\": \"2.0\", \"id\": null, \"error\": {\"code\": -32001, \"message\": \"Sign in to "
+ },
+ {
+  "name": "academy.apexai/apex-ai-academy",
+  "url": "https://apexai.academy/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ad.getle/leads",
+  "url": "https://mcp.getle.ad/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ad.apogee/apogee",
+  "url": "https://app.apogee.ad/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://app.apogee.ad/.well-known/oauth-protected-resource/mcp\"",
+  "note": "{\"error\":\"Invalid or missing Apogee credentials\"}"
+ },
+ {
+  "name": "ad.inside/inside-ads",
+  "url": "https://app.inside.ad/api/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ad.pantheon/mcp",
+  "url": "https://mcp.pantheon.ad/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ad.tide/mcp",
+  "url": "https://api.tide.ad/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ae.alexeysound/alexey-sound",
+  "url": "https://alexeysound.ae/agent.php",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ae.beachclubs/mcp",
+  "url": "https://www.beachclubs.ae/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ae.easyvoice/tts",
+  "url": "https://easyvoice.ae/api/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ae.brainy/grocery-prices",
+  "url": "https://prices.brainy.ae/mcp/v2",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ae.datadubai/dubai-real-estate",
+  "url": "https://mcp.datadubai.ae/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ae.genosys/genosys",
+  "url": "https://genosys.ae/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ae.grovisor/grotax",
+  "url": "https://mcp.grovisor.ae/",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ae.plantguide/dubai-gardening",
+  "url": "https://plantguide.ae/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "sse:event: message data: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{\"listChanged\":true},\"prompts\":{\""
+ },
+ {
+  "name": "ae.mrk/dubai-property",
+  "url": "https://mrk.ae/api/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ae.propick/propick",
+  "url": "https://propick.ae/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ae.projectory/mcp",
+  "url": "https://mcp.projectory.ae/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ae.waggle/fenlight",
+  "url": "https://fenlight.waggle.ae/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ae.waggle/vera",
+  "url": "https://vera.waggle.ae/v1/mcp",
+  "status": 503,
+  "sid": false,
+  "auth": "",
+  "note": " <html><head> <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">"
+ },
+ {
+  "name": "aero.events/events",
+  "url": "https://events.aero/mcp/events",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "africa.ugc/ugc",
+  "url": "https://api.ugc.africa/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ae.employerofrecord/moha-account",
+  "url": "https://employerofrecord.ae/mcp/account",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ae.employerofrecord/moha",
+  "url": "https://employerofrecord.ae/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ag.hood/name-service",
+  "url": "https://www.hood.ag/api/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "agency.goji/goji",
+  "url": "https://mcp.goji.agency/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "sse:event: message data: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{\"listChanged\":true},\"resources\":"
+ },
+ {
+  "name": "agency.ottobot/business-contact-finder",
+  "url": "https://business-contact-finder-mcp.ottobot2025.workers.dev/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "africa.lomi/mcp",
+  "url": "https://mcp.lomi.africa/mcp/guest",
+  "status": 200,
+  "sid": true,
+  "auth": "",
+  "note": "sse:event: message data: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{\"listChanged\":true},\"resources\":",
+  "sidval": "a86fbca8-a…"
+ },
+ {
+  "name": "agency.granek.signal/signal",
+  "url": "https://signal.granek.agency/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://signal.granek.agency/.well-known/oauth-protected-resource/mcp\"",
+  "note": "{\"detail\":\"Требуется вход\"}"
+ },
+ {
+  "name": "agency.ottobot/contractor-license-changes",
+  "url": "https://license-changes-mcp.ottobot2025.workers.dev/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "agency.lona/trading",
+  "url": "https://mcp.lona.agency/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://mcp.lona.agency/.well-known/oauth-protected-resource/mcp\"",
+  "note": "{\"error\":{\"code\":\"AUTHENTICATION_ERROR\",\"message\":\"Authentication failed\"}}"
+ },
+ {
+  "name": "agency.ottobot/licensed-house-painters",
+  "url": "https://house-painters.ottobot.agency/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "agency.thebureauoflostcontext/bureau-public",
+  "url": "https://thebureauoflostcontext.agency/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "agency.justidea/justidea-agency",
+  "url": "https://justidea.agency/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "agency.thirdhemisphere/ai-authority-index",
+  "url": "https://thirdhemisphere.agency/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ai.0si/disclosures",
+  "url": "https://app.0si.ai/api/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer realm=\"0si.ai\", resource_metadata=\"https://app.0si.ai/.well-known/oauth-protected-resource/api/mcp\", scope=\"disclosures:read\"",
+  "note": "{\"error\":\"unauthorized\",\"error_description\":\"0si.ai 로그인(OAuth) 또는 개발자 API 키(Bear"
+ },
+ {
+  "name": "ai.1clickwebsite/mcp",
+  "url": "https://www.1clickwebsite.ai/api/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://www.1clickwebsite.ai/.well-known/oauth-protected-resource/api/mcp\", scope=\"email profile offline_access\"",
+  "note": "{\"jsonrpc\":\"2.0\",\"id\":null,\"error\":{\"code\":-32001,\"message\":\"Sign in with 1Click"
+ },
+ {
+  "name": "agency.zoll/ausfuhr",
+  "url": "https://zoll.agency/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ai.1court.state/court-directory",
+  "url": "https://state.1court.ai/api/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "sse:event: message data: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{\"listChanged\":true}},\"serverInfo"
+ },
+ {
+  "name": "ai.69ai/69ai",
+  "url": "https://69ai.ai/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ai.4ai/domains",
+  "url": "https://4ai.ai/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ai.1325/mcp",
+  "url": "https://agoclnqfyinwjxdmjnns.supabase.co/functions/v1/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer realm=\"mcp\", resource_metadata=\"https://agoclnqfyinwjxdmjnns.supabase.co/functions/v1/mcp/.well-known/oauth-protected-resource\"",
+  "note": "{\"error\":\"unauthorized\"}"
+ },
+ {
+  "name": "ai.28in28/agent-service-desk",
+  "url": "https://28in28.ai/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "OK-INIT"
+ },
+ {
+  "name": "ai.a1lane/a1lane",
+  "url": "https://a1lane.ai/mcp/v1",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ai.a2uicatalog/docs",
+  "url": "https://a2uicatalog.ai/mcp-docs",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ai.aarna/atars-mcp",
+  "url": "https://mcp.aarna.ai/mcp",
+  "status": 502,
+  "sid": false,
+  "auth": "",
+  "note": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-c"
+ },
+ {
+  "name": "ai.aard/aard",
+  "url": "https://api.aard.ai/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer realm=\"api.aard.ai\", error=\"invalid_token\", resource_metadata=\"https://api.aard.ai/.well-known/oauth-protected-resource\"",
+  "note": "{\"jsonrpc\":\"2.0\",\"id\":1,\"error\":{\"code\":-32010,\"message\":\"Authentication require"
+ },
+ {
+  "name": "ai.abmeter/abmeter",
+  "url": "https://mcp.abmeter.ai",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ai.actwise/ideation",
+  "url": "https://actwise.ai/ideation/mcp/v1",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://actwise.ai/ideation/mcp/v1/.well-known/oauth-protected-resource\"",
+  "note": "{\"jsonrpc\":\"2.0\",\"id\":1,\"error\":{\"code\":401,\"message\":\"Missing Bearer access tok"
+ },
+ {
+  "name": "ai.achromat/mcp-server",
+  "url": "https://achromat.ai/mcp",
+  "status": 0,
+  "sid": false,
+  "auth": "",
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ai.adadvisor/mcp-server",
+  "url": "https://api.adadvisor.ai/mcp",
+  "status": 401,
+  "sid": false,
+  "auth": "Bearer resource_metadata=\"https://api.adadvisor.ai/.well-known/oauth-protected-resource/mcp\"",
+  "note": ""
+ },
+ {
+  "name": "ai.a2uicatalog/catalog",
+  "url": "https://a2uicatalog.ai/mcp",
+  "status": 200,
+  "sid": false,
+  "auth": "",
+  "note": "nonjson"
+ }
+]

@@ -1,5 +1,3 @@
-> 🔬 **Live self-service audit:** [dshcorrectover.github.io/mcp-session-audit](https://dshcorrectover.github.io/mcp-session-audit/) · API: `POST http://120.26.163.143:8787/v1/audit` with {"url":"..."} · [Blog: The Schrödinger Identity of MCP](BLOG.md)
-
 # mcp-session-audit
 
 **Naming the "Session-as-Identity" antinomy — and giving every MCP server a free checkup.**

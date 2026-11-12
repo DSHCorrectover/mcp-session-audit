@@ -1,0 +1,38 @@
+name: 'MCP Session Audit'
+description: 'Run the mcp-session-audit protocol against your MCP server in CI. Detects Session-as-Identity defects and unauthenticated tool surfaces.'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  endpoint:
+    description: 'Streamable HTTP MCP endpoint URL (your own server!)'
+    required: true
+  victim-token:
+    description: 'A valid token for principal V (your test account)'
+    required: false
+  attacker-token:
+    description: 'A valid token for principal A (your other test account)'
+    required: false
+  fail-on-defect:
+    description: 'Exit non-zero if Session-as-Identity or unauthenticated tool surface detected'
+    default: 'true'
+outputs:
+  verdict:
+    description: 'bound | session-as-identity | unauthenticated-surface'
+    value: ${{ steps.audit.outputs.verdict }}
+runs:
+  using: 'composite'
+  steps:
+    - id: audit
+      shell: bash
+      run: |
+        node ${{ github.action_path }}/../tool/audit.mjs \
+          --url "${{ inputs.endpoint }}" \
+          ${{ inputs.victim-token && format('--victim-token {0}', inputs.victim-token) || '' }} \
+          ${{ inputs.attacker-token && format('--attacker-token {0}', inputs.attacker-token) || '' }} \
+          --json > audit-result.json
+        VERDICT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('audit-result.json','utf8')).verdict)")
+        echo "verdict=$VERDICT" >> $GITHUB_OUTPUT
+        echo "### mcp-session-audit verdict: \`$VERDICT\`" >> $GITHUB_STEP_SUMMARY
+        cat audit-result.json >> $GITHUB_STEP_SUMMARY
+        if [ "${{ inputs.fail-on-defect }}" = "true" ] && [ "$VERDICT" != "bound" ]; then exit 1; fi

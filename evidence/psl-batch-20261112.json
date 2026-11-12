@@ -1,0 +1,149 @@
+[
+ {
+  "name": "academy.ase/periodic-system",
+  "url": "https://ase.academy/mcp",
+  "status": 200,
+  "tools": 4,
+  "note": "tools:overview,find_elements,get_element,repository_checklist"
+ },
+ {
+  "name": "academy.apexai/apex-ai-academy",
+  "url": "https://apexai.academy/mcp",
+  "status": 200,
+  "tools": 30,
+  "note": "tools:list_courses,list_lessons,get_lesson,search"
+ },
+ {
+  "name": "ad.getle/leads",
+  "url": "https://mcp.getle.ad/mcp",
+  "status": 200,
+  "tools": 35,
+  "note": "tools:get_account,list_mailboxes,test_mailbox,list_campaigns"
+ },
+ {
+  "name": "ad.inside/inside-ads",
+  "url": "https://app.inside.ad/api/mcp",
+  "status": 200,
+  "tools": 3,
+  "note": "tools:estimate_campaign,create_campaign_draft,get_draft_status"
+ },
+ {
+  "name": "ae.alexeysound/alexey-sound",
+  "url": "https://alexeysound.ae/agent.php",
+  "status": 200,
+  "tools": 0,
+  "note": "tools:"
+ },
+ {
+  "name": "ae.easyvoice/tts",
+  "url": "https://easyvoice.ae/api/mcp",
+  "status": 200,
+  "tools": 7,
+  "note": "tools:text_to_speech,list_voices,get_usage,generate_long_form"
+ },
+ {
+  "name": "ae.brainy/grocery-prices",
+  "url": "https://prices.brainy.ae/mcp/v2",
+  "status": 200,
+  "tools": 26,
+  "note": "tools:commute_cost,costs_by_area,costs_by_emirate,data_sources"
+ },
+ {
+  "name": "ae.datadubai/dubai-real-estate",
+  "url": "https://mcp.datadubai.ae/mcp",
+  "status": 200,
+  "tools": 6,
+  "note": "tools:search,get_entity,get_market_summary,get_monthly_report"
+ },
+ {
+  "name": "ae.genosys/genosys",
+  "url": "https://genosys.ae/mcp",
+  "status": 200,
+  "tools": 11,
+  "note": "tools:search_products,get_product,recommend_routine,list_categories"
+ },
+ {
+  "name": "ae.grovisor/grotax",
+  "url": "https://mcp.grovisor.ae/",
+  "status": 200,
+  "tools": 8,
+  "note": "tools:grotax_compute_ct,grotax_health_check,grotax_list_health_questions,grotax_tp_thresholds"
+ },
+ {
+  "name": "ae.plantguide/dubai-gardening",
+  "url": "https://plantguide.ae/mcp",
+  "status": 0,
+  "tools": 0,
+  "note": "ERR:fetch failed"
+ },
+ {
+  "name": "ae.mrk/dubai-property",
+  "url": "https://mrk.ae/api/mcp",
+  "status": 200,
+  "tools": 22,
+  "note": "tools:ask,search_projects,get_project,compare_projects"
+ },
+ {
+  "name": "ag.hood/name-service",
+  "url": "https://www.hood.ag/api/mcp",
+  "status": 200,
+  "tools": 5,
+  "note": "tools:resolve_name,reverse_resolve,resolve_text,check_availability"
+ },
+ {
+  "name": "agency.goji/goji",
+  "url": "https://mcp.goji.agency/mcp",
+  "status": 200,
+  "tools": 9,
+  "note": "tools:goji_search,goji_explain_term,goji_browse_glossary,goji_get_service"
+ },
+ {
+  "name": "africa.lomi/mcp",
+  "url": "https://mcp.lomi.africa/mcp/guest",
+  "status": 400,
+  "tools": 0,
+  "note": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"Bad Reque"
+ },
+ {
+  "name": "agency.justidea/justidea-agency",
+  "url": "https://justidea.agency/mcp",
+  "status": 200,
+  "tools": 0,
+  "note": "tools:"
+ },
+ {
+  "name": "agency.thirdhemisphere/ai-authority-index",
+  "url": "https://thirdhemisphere.agency/mcp",
+  "status": 200,
+  "tools": 12,
+  "note": "tools:list_index_editions,get_edition_results,get_company_authority_score,get_company_score_history"
+ },
+ {
+  "name": "agency.zoll/ausfuhr",
+  "url": "https://zoll.agency/mcp",
+  "status": 200,
+  "tools": 8,
+  "note": "tools:kumulierung_pruefen,praeferenznachweis_bestimmen,incoterms_waehlen,warennummer_suchen"
+ },
+ {
+  "name": "ai.1court.state/court-directory",
+  "url": "https://state.1court.ai/api/mcp",
+  "status": 200,
+  "tools": 11,
+  "note": "tools:list_rule_sets,search_rules,get_rule,list_triggers"
+ },
+ {
+  "name": "ai.28in28/agent-service-desk",
+  "url": "https://28in28.ai/mcp",
+  "status": 200,
+  "tools": 3,
+  "note": "tools:checkDomain,quoteFixVerify,verifyFixVerify"
+ },
+ {
+  "name": "ai.a2uicatalog/catalog",
+  "url": "https://a2uicatalog.ai/mcp",
+  "status": 200,
+  "tools": 0,
+  "note": "ERR:timeout"
+ }
+]

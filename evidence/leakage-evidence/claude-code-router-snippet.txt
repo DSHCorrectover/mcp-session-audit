@@ -1,0 +1,14 @@
+1193-      if (this.sessionId) {
+1194:        headers.set("mcp-session-id", this.sessionId);
+1195-      }
+--
+1201-      });
+1202:      this.sessionId = response.headers.get("mcp-session-id") || response.headers.get("x-mcp-session-id") || this.sessionId;
+1203-      if (notification && response.status === 204) {
+--
+2371-    "import",
+2372:    "localstorage",
+2373-    "login",
+--
+2376-    "storage"
+2377:  ]) || /chrome|cookie|cookies|localstorage|local storage|登录态|登录状态|导入登录|浏览器登录|本地存储/.test(normalizedText)) {

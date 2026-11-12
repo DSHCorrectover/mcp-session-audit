@@ -14,8 +14,8 @@
 <tr><td><code>auth-enforced</code></td><td>OAuth/Bearer gating present</td></tr></table>
 <h3>Verdict Engagement pricing (Alipay, live checkout)</h3>
 <table><tr><th>Plan</th><th>Price</th><th></th></tr>
-<tr><td><b>Starter</b> — self-serve audit + one bounded review report</td><td>¥299</td><td><a href="https://correctover.com/pay?plan=starter"><button>Buy Starter</button></a></td></tr>
-<tr><td><b>Team</b> — multi-endpoint + managed OAuth-binding scans + verdict report</td><td>¥899</td><td><a href="https://correctover.com/pay?plan=team"><button>Buy Team</button></a></td></tr></table>
+<tr><td><b>Starter</b> — self-serve audit + one bounded review report</td><td>¥299</td><td><a href="https://correctover.com/checkout?plan=starter"><button>Buy Starter</button></a></td></tr>
+<tr><td><b>Team</b> — multi-endpoint + managed OAuth-binding scans + verdict report</td><td>¥899</td><td><a href="https://correctover.com/checkout?plan=team"><button>Buy Team</button></a></td></tr></table>
 <p>CI: <code>uses: DSHCorrectover/mcp-session-audit/action@main</code> — fail your build on defects. Waitlist for managed OAuth-binding scans: <a href="http://120.26.163.143:8787/">audit API home</a>.</p>
 <script>
 async function run(e){e.preventDefault();const u=document.getElementById('u').value;const o=document.getElementById('out');o.textContent='probing… (≤3 read-only requests)';

@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset=utf-8><title>mcp-session-audit — is your MCP server leaking its tool inventory?</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Passive session-security audit for MCP servers. 37% of the official registry is unauthenticated; 76% of those expose tools with zero handshake. Test your own server in one click.">
+<style>body{font-family:system-ui;max-width:780px;margin:48px auto;padding:0 20px;color:#111;line-height:1.55}h1{font-size:1.6rem;line-height:1.25}code,pre{background:#f4f4f4;border-radius:6px}pre{padding:12px;overflow:auto}input,button{font-size:1rem;padding:9px;border-radius:6px;border:1px solid #ccc}input{width:58%}button{background:#111;color:#fff;border:0;cursor:pointer}#out{margin-top:14px}.v{font-weight:800;font-size:1.1rem}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:6px 8px;text-align:left;font-size:.92rem}</style></head><body>
+<h1>Is your MCP server leaking its tool inventory?</h1>
+<p>We passively scanned 57 officially registered MCP endpoints: <b>37% need no authentication</b>, and <b>76% of those return full tool inventories with zero protocol handshake</b>. Full data: <a href="https://github.com/DSHCorrectover/mcp-session-audit">github.com/DSHCorrectover/mcp-session-audit</a>.</p>
+<p><b>Self-service audit (free, read-only, ≤3 requests):</b></p>
+<form onsubmit="run(event)"><input id=u placeholder="https://your-server.example/mcp" required> <button>Audit my server</button></form>
+<div id=out></div>
+<h3>Verdict taxonomy</h3>
+<table><tr><th>verdict</th><th>meaning</th></tr>
+<tr><td><code>unauthenticated-surface</code></td><td>tools listed with no auth, no handshake</td></tr>
+<tr><td><code>session-as-identity</code></td><td>auth present, sessions not bound to subject (P-A1 class)</td></tr>
+<tr><td><code>session-validated</code></td><td>correct — fabricated/missing session IDs rejected</td></tr>
+<tr><td><code>auth-enforced</code></td><td>OAuth/Bearer gating present</td></tr></table>
+<p>CI: <code>uses: DSHCorrectover/mcp-session-audit/action@main</code> — fail your build on defects. Waitlist for managed OAuth-binding scans: <a href="http://120.26.163.143:8787/">audit API home</a>.</p>
+<script>
+async function run(e){e.preventDefault();const u=document.getElementById('u').value;const o=document.getElementById('out');o.textContent='probing… (≤3 read-only requests)';
+try{const r=await fetch('http://120.26.163.143:8787/v1/audit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:u})});const j=await r.json();
+o.innerHTML='<p class=v>verdict: '+j.verdict+'</p><pre>'+JSON.stringify(j.tests,null,1)+'</pre>';}catch(x){o.textContent='error: '+x+' — try the API home directly.'}}
+</script></body></html>

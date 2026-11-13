@@ -2,7 +2,7 @@
 
 **Naming the "Session-as-Identity" antinomy — and giving every MCP server a free checkup.**
 
-> **The claim**: MCP conflates a *session routing identifier* (`Mcp-Session-Id`) with a *security subject identifier*. This architectural antinomy — **Session-as-Identity** — explains an entire defect class across SDKs and deployments. We provide the first cross-implementation test protocol, a replayable audit suite, and a remediation matrix.
+> **The claim**: MCP conflates a *session routing identifier* (`Mcp-Session-Id`) with a *security subject identifier*. This architectural antinomy — **Session-as-Identity** — explains an entire defect class across SDKs and deployments. We provide a cross-implementation test protocol, a replayable audit suite, and a remediation matrix.
 
 ## Why this matters
 
@@ -37,6 +37,11 @@
 - [ ] Cross-implementation matrix v1 (target: 10+ implementations)
 - [ ] Release of audit CLI v0.1
 - [ ] Responsible-disclosure wave + SEP input
+
+
+## Services
+
+Need your MCP server or deployment audited against this protocol? Correctover provides manual security audits of agent/MCP integrations — fail-closed review with an evidence dossier you can re-verify. Every engagement ships a signed, independently checkable verdict. Rates on request: wangguigui@correctover.com.
 
 ## Author & contact
 

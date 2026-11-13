@@ -43,6 +43,19 @@
 
 Need your MCP server or deployment audited against this protocol? Correctover provides manual security audits of agent/MCP integrations — fail-closed review with an evidence dossier you can re-verify. Every engagement ships a signed, independently checkable verdict. Rates on request: wangguigui@correctover.com.
 
+
+## Self-service audit API
+
+Point it at your own MCP server and get a verdict JSON back (read-only probes, no handshake forgery):
+
+```bash
+curl -X POST https://api.correctover.com/v1/audit \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://your-server.example/mcp"}'
+```
+
+Verdicts: `unauthenticated-surface` / `stateless-no-session` / `bound-or-inconclusive`. Full methodology in this repo. For a deeper engagement (fail-closed review with a signed, re-verifiable evidence dossier), contact wangguigui@correctover.com.
+
 ## Author & contact
 
 Guigui Wang — Correctover · wangguigui@correctover.com

@@ -54,6 +54,8 @@ curl -X POST https://api.correctover.com/v1/audit \
   -d '{"url": "https://your-server.example/mcp"}'
 ```
 
+Backup endpoint (while the primary domain certificate finalizes): `https://correctover-api.pages.dev/v1/audit`.
+
 Verdicts: `unauthenticated-surface` / `stateless-no-session` / `bound-or-inconclusive`. Full methodology in this repo. For a deeper engagement (fail-closed review with a signed, re-verifiable evidence dossier), contact wangguigui@correctover.com.
 
 ## Author & contact

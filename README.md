@@ -79,3 +79,5 @@ Guigui Wang — Correctover · wangguigui@correctover.com
 - `evidence/cx1-ts-sdk/` — TS SDK 1.32.2 dynamic verdict (measured dynamic)
 - `evidence/cx3-python-sdk/` — Python SDK 2.3.0 dynamic pack (measured dynamic)
 - `evidence/sbsr/` — fixtures (17) + dual verifiers + battery-results.json (zero disagreements)
+
+> **Terminology note**: "ACM CCS" always refers to the ACM Conference on Computer and Communications Security. The project abbreviation "CCS" (Correctover Conformance Suite, full name TBD by owner) is a separate term; docs avoid conflating them. SBSR full name: Subject-Bound Session Receipt.

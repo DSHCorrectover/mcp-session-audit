@@ -36,6 +36,15 @@ It does **not** replace MCP transport, OAuth, or gateway routing. It records the
 | Field | Meaning |
 |-------|--------|
 | `sbsr_version` | `0.1` |
+
+**Normative one-line definitions (v0.2, binds TV-B1..B5):**
+
+- **TV-B1 (Subject Binding)**: a receipt MUST be denied unless `auth_subject` equals the registered owner of `session_id` per the operator's owner-map. Falsified by: any cross-subject receipt (measured: `tv-b1-cross-subject`, `tv-b1-signed-cross-subject`).
+- **TV-B2 (Request Commitment)**: for `action=tools/call`, `params_hash` MUST equal the JCS hash of the canonical request parameters the receipt authorizes. Falsified by: signature over receipt with altered `params_hash` (`tv-b2-signed-params-mutated`); unsigned group is outside the claim domain (control).
+- **TV-B3 (Tool Commitment)**: `tool` MUST be identical to the tool name bound at signing time. Falsified by: signature over receipt with substituted `tool` (`tv-b3-signed-tool-swapped`); unsigned group is control.
+- **TV-B4 (Freshness)**: a receipt MUST be denied if current time ∉ [`iat`, `exp`] (exp optional; iat mandatory). Falsified by: `tv-b4-expired`, `tv-b4-iat-future`. Time-source assumptions are declared in MINIMAL-CONDITION.md §5 and the assumptions table (§15).
+- **TV-B5 (Verdict Integrity)**: the signature MUST cover the `verdict` field; any post-signing mutation of any signed field invalidates the receipt. Falsified by: `tv-b5-verdict-flipped`, `tv-b5-params-mutated-signed`.
+- **Fail-closed default (structural complement, not a sixth TV)**: fields absent from the receipt, unknown schema fields, unknown session ids, and duplicate JSON keys are all DENY. This is the condition under which TV-B1..B5 exhaust the closed-world schema — see `MINIMAL-CONDITION.md`.
 | `session_id` or `session_id_hash` | S or hash(S) if raw id must not leave the trust boundary |
 | `auth_subject` | Stable id of U (token subject / client_id / user id) |
 | `action` | `tools/call` \| `session/delete` \| extension |

@@ -111,4 +111,44 @@ Conformance for an implementation = **measured** PROTOCOL rows show Bound, and (
 
 ---
 
+
+---
+
+## 9. Falsifiable binding vectors (TV-B1..B5, from dual-draft merge 2026-11-16)
+
+Each binding claim must have a byte-exact test vector: the verifier MUST `deny` when any one
+component is dropped or substituted, and MUST `allow` the unmodified original.
+
+| Vector | Claim | Mutation (must deny) |
+|--------|-------|---------------------|
+| TV-B1 | session bound to subject | receipt with `auth_subject` ≠ session owner |
+| TV-B2 | params committed | `params_hash` recomputed over altered args |
+| TV-B3 | tool committed | `tool` swapped, rest unchanged |
+| TV-B4 | freshness | `exp` in past, or `iat`>now |
+| TV-B5 | verdict integrity | signed bytes covering `verdict`; `allow`↔`deny` flip |
+
+Mutation battery: 5 mutations × both verifiers, results recorded in `evidence/sbsr/`.
+
+## 10. Dual-verifier gate (hard)
+
+- Verifier A (reference, emitter-adjacent) and Verifier B (independent, `independent-reader`
+  discipline, no shared code) must agree on every TV and on 5 mutated inputs each.
+- Disagreement = draft is broken, not a "known limitation". No v1.0 freeze until zero disagreement.
+
+## 11. Phase 2 exit criteria (pre-registered, hard)
+
+1. This doc frozen to v1.0 with all 5 TVs byte-exact
+2. Reference verifier passes all TVs; independent verifier passes without cross-contamination
+3. Mutation battery (5 mutations × both verifiers) recorded in `evidence/sbsr/`
+4. One page of SBSR text ready for SEP-comment / advisory channel submission
+5. Argument (not assertion) of the minimal-sufficient condition: no deployment satisfies
+   {anti-hijack, attribution, revocation} simultaneously without binding S, U, and the request
+
+## 12. Evidence tier note
+
+All fixtures under `evidence/sbsr/` labeled per INVENTION-ROADMAP.md tier table; unsigned and
+signed fixture groups kept separate to avoid label mixing.
+
+---
+
 *Phase 1 evidence base: TS + Python official SDKs measured dynamic Session-as-Identity under auth. Phase 2 turns “must bind” into an object that can be tested and optionally re-verified offline.*

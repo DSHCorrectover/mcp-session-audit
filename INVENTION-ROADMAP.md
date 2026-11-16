@@ -70,3 +70,29 @@ Deliverables:
 - `mcp-session-audit` protocol & evidence discipline
 - CCS / Ed25519 / JCS receipt stack (`agent-runtime-guard`, `ccs-conformance-vectors`, `independent-reader`)
 - Existing CVE/SEP awareness (credit ecosystem; do not erase prior art)
+
+---
+
+## Evidence tier discipline (supersedes implicit labels, 2026-11-16)
+
+| Label | Allowed evidence |
+|-------|-----------------|
+| `measured (dynamic)` | replay script + verdict JSON + command log, third-party runnable |
+| `measured (static)` | line-level code audit + version pin, third-party re-readable |
+| `reported` | public advisory / SEP link |
+| `spec` | specification text citation |
+
+Ban: unlabeled mixing; `measured` without an evidence pointer. MATRIX rows carrying `measured` must state which tier backs each cell.
+
+**Current truth (2026-11-16 audit)**: CX-1 static tier is closed (spec-semantics + line-level code audit); dynamic replay artifacts for P-A1/P-A2 verdicts are pending and must land in `evidence/cx-1/` before the `measured` label counts as dynamic. MATRIX cells currently read as dynamic stay flagged until the replay pack lands. CX-3 slot OPEN.
+
+## Success criteria (pre-registered, hard-coded)
+
+"Invention-level recognition" = at least 2 of:
+
+1. Cited in formal MCP / IETF / security-community discussion or SEP
+2. Second-party independent reproduction of a core result (matrix row or binding primitive)
+3. Vulnerability class named in an official advisory (CVE line continues)
+4. Benchmark / vector pool cited by default by third parties
+
+**Failure to reach 2 = research progress, not a recognized invention.** Reconciliation date: **2027-02-14**.

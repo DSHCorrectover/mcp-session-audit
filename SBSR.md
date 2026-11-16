@@ -123,7 +123,13 @@ Conformance for an implementation = **measured** PROTOCOL rows show Bound, and (
 
 ---
 
-## 9. Falsifiable binding vectors (TV-B1..B5, from dual-draft merge 2026-11-16)
+## 9. Binding-check vectors (TV-B1..B5, from dual-draft merge 2026-11-16)
+
+**Claim-scope note (2026-11-16 stress-test review):** this is an *enumerated five-binding-check
+suite* (binding / integrity / freshness), **not** a general proof of falsifiability. The mutation
+set is closed by design; the DENY verdicts are produced by the implementation under test, so the
+self-attestation limit is real. An independent-observer deployment (mutation injected / deny
+observed by a third party) is the open question — see MINIMAL-CONDITION.md.
 
 Each binding claim must have a byte-exact test vector: the verifier MUST `deny` when any one
 component is dropped or substituted, and MUST `allow` the unmodified original.

@@ -62,6 +62,7 @@ Target for Phase 1 close: **≥3** independent, documented counterexamples of Se
 ## Phase 1 exit criteria
 
 1. `DEFINITION.md` locked (done)
-2. ≥2 auth-enforced Session-as-Identity rows with replayable evidence **or** 1 auth-enforced + clear MATRIX contrast with unauthenticated-surface
-3. CX-3 filled or explicitly deferred with date
-4. `INVENTION-ROADMAP.md` Phase 2 gate reviewed
+2. ≥2 auth-enforced Session-as-Identity rows with replayable evidence ✅ **CLOSED 2026-11-16** — CX-1 (TS SDK 1.32.2, static closed, dynamic pack pending-flagged) + CX-3 (Python SDK 2.3.0, `measured (dynamic)`, evidence/cx3-python-sdk/, checklist green)
+3. CX-3 filled ✅ (c093488)
+4. `INVENTION-ROADMAP.md` Phase 2 gate reviewed ✅ (3cd60f0)
+→ **Phase 1 CLOSED 2026-11-16. Gate to Phase 2: Subject-Bound Session Receipt design draft (SBSR-DESIGN.md).**

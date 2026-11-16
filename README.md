@@ -18,8 +18,9 @@ curl -X POST https://api.correctover.com/v1/audit \
 
 Three verdicts: `unauthenticated-surface` / `stateless-no-session` / `bound-or-inconclusive`. No signup, no key. [Full API](API.md) · [What a paid dossier looks like (free sample)](docs-sample-verdict-dossier.md)
 
-**Track record (verifiable, external):** framework adopted upstream —
-[google/adk-python #6099](https://github.com/google/adk-python/issues/6099) integrated the CCS conformance framework and invited the PR;
+**Track record (verifiable, external):**
+participating contributor in the decision-ledger RFC discussion at
+[google/adk-python #6099](https://github.com/google/adk-python/issues/6099) (in-thread since Aug 2026);
 4th independent author-set in the action-ref conformance ecosystem
 ([argentum-core #163](https://github.com/giskard09/argentum-core/pull/163),
 [draft-etcheverry-action-ref #12](https://github.com/giskard09/draft-etcheverry-action-ref/pull/12));

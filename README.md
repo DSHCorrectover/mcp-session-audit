@@ -8,6 +8,23 @@
 **Counterexample register:** [`PHASE1-COUNTEREXAMPLES.md`](PHASE1-COUNTEREXAMPLES.md)  
 **90-day invention roadmap:** [`INVENTION-ROADMAP.md`](INVENTION-ROADMAP.md)
 
+## Try it in 30 seconds
+
+```bash
+curl -X POST https://api.correctover.com/v1/audit \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://your-server.example/mcp"}'
+```
+
+Three verdicts: `unauthenticated-surface` / `stateless-no-session` / `bound-or-inconclusive`. No signup, no key. [Full API](API.md) · [What a paid dossier looks like (free sample)](docs-sample-verdict-dossier.md)
+
+**Track record (verifiable, external):** framework adopted upstream —
+[google/adk-python #6099](https://github.com/google/adk-python/issues/6099) integrated the CCS conformance framework and invited the PR;
+4th independent author-set in the action-ref conformance ecosystem
+([argentum-core #163](https://github.com/giskard09/argentum-core/pull/163),
+[draft-etcheverry-action-ref #12](https://github.com/giskard09/draft-etcheverry-action-ref/pull/12));
+IETF draft-correctover-ccs rev 10 (expires 2027-04).
+
 ## Why this matters
 
 - The session ID answers *"which context am I operating in"*; authentication answers *"who is calling"*. **The MCP Streamable HTTP specification (2025-06-18) never requires these to be bound**, and the official TypeScript SDK validates a session with plain string equality only.
@@ -52,17 +69,7 @@
 
 Need your MCP server or deployment audited against this protocol? Correctover provides manual security audits of agent/MCP integrations — fail-closed review with an evidence dossier you can re-verify. Rates on request: wangguigui@correctover.com.
 
-## Self-service audit API
-
-```bash
-curl -X POST https://api.correctover.com/v1/audit \
-  -H "Content-Type: application/json" \
-  -d '{"url": "https://your-server.example/mcp"}'
-```
-
-Backup: `https://correctover-api.pages.dev/v1/audit`.
-
-Verdicts: `unauthenticated-surface` / `stateless-no-session` / `bound-or-inconclusive`. Methodology in this repo.
+Backup endpoint: `https://correctover-api.pages.dev/v1/audit`. Methodology in this repo.
 
 ## Author & contact
 

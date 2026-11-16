@@ -1,0 +1,15 @@
+{
+ "action": "tools/call",
+ "auth_subject": "subj-victim",
+ "exp": 1794793165,
+ "iat": 1794792865,
+ "jti": "tv-b1s0",
+ "params_hash": "cc5e7c7d1cf09e1db3e4d649fdb06b9dbff587599d3b4bd8ba847e4332574b01",
+ "policy_id": "sbsr-default",
+ "sbsr_version": "0.1",
+ "session_id": "7d885027f39842b4a67aa021a3148430",
+ "sig": "EOP5-kHyOUhcLH-bI6WLzxbmExCJxSbEUO6t59mh_WBSsr5Pwmqsolkt0BKKMifRnjD-ChS3Yg4LWogyG83LDg",
+ "sig_alg": "Ed25519",
+ "tool": "marker_exec",
+ "verdict": "allow"
+}

@@ -1,0 +1,13 @@
+{
+ "action": "tools/call",
+ "auth_subject": "subj-victim",
+ "exp": 1794793165,
+ "iat": 1794792865,
+ "jti": "tv-b0-original",
+ "params_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+ "policy_id": "sbsr-default",
+ "sbsr_version": "0.1",
+ "session_id": "7d885027f39842b4a67aa021a3148430",
+ "tool": "marker_exec",
+ "verdict": "allow"
+}

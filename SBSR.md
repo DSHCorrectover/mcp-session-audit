@@ -144,7 +144,23 @@ Mutation battery: 5 mutations × both verifiers, results recorded in `evidence/s
 5. Argument (not assertion) of the minimal-sufficient condition: no deployment satisfies
    {anti-hijack, attribution, revocation} simultaneously without binding S, U, and the request
 
-## 12. Evidence tier note
+## 12. Revision record (dual-verifier loop, 2026-11-16)
+
+**Round 1** (evidence/sbsr/round-1/): fixtures 9, unsigned group. Two verifier implementations ran
+zero-disagreement — but TV-B1/B2/B3 were **not falsifiable in the unsigned group** (no owner truth
+table, no signature coverage). Per the hard gate this is a draft defect, not a limitation.
+
+**v0.2 fixes**: (a) TV-B1 gains an owner-map context (`_context.json`); both verifiers check
+`auth_subject == owner(session_id)` — cross-subject now DENYs in both groups; (b) TV-B2/B3 moved to
+the signed group with a **sign-then-mutate** discipline (an early generator bug signed after
+mutating, which made mutations self-consistent — caught by this battery); (c) unsigned b2/b3
+mutations kept as ALLOW-controls proving the verifiers do not misfire outside the signed-claim domain.
+
+**Round 2** (verdicts-A.json / verdicts-B.json / battery-results.json): 14 fixtures, verifiers A
+(cryptography stack, linear chain) and B (pynacl stack, hand-rolled canonicalizer, table-driven)
+**zero disagreements**, 10 mutations DENY / 4 originals ALLOW, battery_pass=true.
+
+## 13. Evidence tier note
 
 All fixtures under `evidence/sbsr/` labeled per INVENTION-ROADMAP.md tier table; unsigned and
 signed fixture groups kept separate to avoid label mixing.

@@ -1,0 +1,47 @@
+{
+ "tv-b0-original-unsigned.json": {
+  "verifier": "A",
+  "allow": true,
+  "code": "A-OK-UNSIGNED"
+ },
+ "tv-b1-cross-subject.json": {
+  "verifier": "A",
+  "allow": true,
+  "code": "A-OK-UNSIGNED"
+ },
+ "tv-b2-params-mutated.json": {
+  "verifier": "A",
+  "allow": true,
+  "code": "A-OK-UNSIGNED"
+ },
+ "tv-b3-tool-swapped.json": {
+  "verifier": "A",
+  "allow": true,
+  "code": "A-OK-UNSIGNED"
+ },
+ "tv-b4-expired.json": {
+  "verifier": "A",
+  "allow": false,
+  "code": "A-TIME-EXPIRED"
+ },
+ "tv-b4-iat-future.json": {
+  "verifier": "A",
+  "allow": false,
+  "code": "A-TIME-IAT-FUTURE"
+ },
+ "tv-b5-params-mutated-signed.json": {
+  "verifier": "A",
+  "allow": false,
+  "code": "A-SIG-INVALID"
+ },
+ "tv-b5-signed-original.json": {
+  "verifier": "A",
+  "allow": true,
+  "code": "A-OK-SIGNED"
+ },
+ "tv-b5-verdict-flipped.json": {
+  "verifier": "A",
+  "allow": false,
+  "code": "A-SIG-INVALID"
+ }
+}

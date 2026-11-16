@@ -1,0 +1,93 @@
+{
+ "date": "2026-11-16",
+ "schema": "v0.2 (TV-B1 owner-map context; TV-B2/B3 signed-group falsifiability; unsigned b2/b3 = controls)",
+ "fixtures": 14,
+ "disagreements": [],
+ "battery_pass": true,
+ "detail": {
+  "tv-b0-original-unsigned.json": {
+   "A": true,
+   "B": true,
+   "expected": "ALLOW",
+   "pass": true
+  },
+  "tv-b1-cross-subject.json": {
+   "A": false,
+   "B": false,
+   "expected": "DENY",
+   "pass": true
+  },
+  "tv-b1-signed-cross-subject.json": {
+   "A": false,
+   "B": false,
+   "expected": "DENY",
+   "pass": true
+  },
+  "tv-b1-signed-original.json": {
+   "A": true,
+   "B": true,
+   "expected": "ALLOW",
+   "pass": true
+  },
+  "tv-b2-params-mutated.json": {
+   "A": true,
+   "B": true,
+   "expected": "ALLOW",
+   "pass": true
+  },
+  "tv-b2-signed-params-mutated.json": {
+   "A": false,
+   "B": false,
+   "expected": "DENY",
+   "pass": true
+  },
+  "tv-b3-signed-original.json": {
+   "A": true,
+   "B": true,
+   "expected": "ALLOW",
+   "pass": true
+  },
+  "tv-b3-signed-tool-swapped.json": {
+   "A": false,
+   "B": false,
+   "expected": "DENY",
+   "pass": true
+  },
+  "tv-b3-tool-swapped.json": {
+   "A": true,
+   "B": true,
+   "expected": "ALLOW",
+   "pass": true
+  },
+  "tv-b4-expired.json": {
+   "A": false,
+   "B": false,
+   "expected": "DENY",
+   "pass": true
+  },
+  "tv-b4-iat-future.json": {
+   "A": false,
+   "B": false,
+   "expected": "DENY",
+   "pass": true
+  },
+  "tv-b5-params-mutated-signed.json": {
+   "A": false,
+   "B": false,
+   "expected": "DENY",
+   "pass": true
+  },
+  "tv-b5-signed-original.json": {
+   "A": true,
+   "B": true,
+   "expected": "ALLOW",
+   "pass": true
+  },
+  "tv-b5-verdict-flipped.json": {
+   "A": false,
+   "B": false,
+   "expected": "DENY",
+   "pass": true
+  }
+ }
+}

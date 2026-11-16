@@ -1,0 +1,72 @@
+{
+ "tv-b0-original-unsigned.json": {
+  "verifier": "B",
+  "allow": true,
+  "code": "B-OK-UNSIGNED"
+ },
+ "tv-b1-cross-subject.json": {
+  "verifier": "B",
+  "allow": false,
+  "code": "B-SUBJECT-MISMATCH"
+ },
+ "tv-b1-signed-cross-subject.json": {
+  "verifier": "B",
+  "allow": false,
+  "code": "B-SUBJECT-MISMATCH"
+ },
+ "tv-b1-signed-original.json": {
+  "verifier": "B",
+  "allow": true,
+  "code": "B-OK-SIGNED"
+ },
+ "tv-b2-params-mutated.json": {
+  "verifier": "B",
+  "allow": true,
+  "code": "B-OK-UNSIGNED"
+ },
+ "tv-b2-signed-params-mutated.json": {
+  "verifier": "B",
+  "allow": false,
+  "code": "B-BADSIG"
+ },
+ "tv-b3-signed-original.json": {
+  "verifier": "B",
+  "allow": true,
+  "code": "B-OK-SIGNED"
+ },
+ "tv-b3-signed-tool-swapped.json": {
+  "verifier": "B",
+  "allow": false,
+  "code": "B-BADSIG"
+ },
+ "tv-b3-tool-swapped.json": {
+  "verifier": "B",
+  "allow": true,
+  "code": "B-OK-UNSIGNED"
+ },
+ "tv-b4-expired.json": {
+  "verifier": "B",
+  "allow": false,
+  "code": "B-EXPIRED"
+ },
+ "tv-b4-iat-future.json": {
+  "verifier": "B",
+  "allow": false,
+  "code": "B-IAT-FUTURE"
+ },
+ "tv-b5-params-mutated-signed.json": {
+  "verifier": "B",
+  "allow": false,
+  "code": "B-BADSIG"
+ },
+ "tv-b5-signed-original.json": {
+  "verifier": "B",
+  "allow": true,
+  "code": "B-OK-SIGNED"
+ },
+ "tv-b5-verdict-flipped.json": {
+  "verifier": "B",
+  "allow": false,
+  "code": "B-BADSIG"
+ }
+}

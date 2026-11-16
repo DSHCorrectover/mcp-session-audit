@@ -1,0 +1,17 @@
+{
+ "target": "@modelcontextprotocol/sdk 1.32.2 (official TS SDK) + express Bearer auth layer",
+ "tier": "measured (dynamic)",
+ "date": "2026-11-16",
+ "self_operated": true,
+ "script": "../oneshot3-auth.mjs",
+ "sdk_version_verified": "1.32.2",
+ "results": {
+  "P-A0_no_token": 401,
+  "P-A0b_victim_session": "sid d9ef7d86 established",
+  "P-A1_cross_subject_tools_call": {"status": 200, "marker": "TRANSFER-EXEC:attacker:$99999 executed via victim session"},
+  "P-A2_cross_subject_DELETE": {"status": 200},
+  "P-A2b_victim_after_kill": {"status": 404}
+ },
+ "verdict": "Session-as-Identity (auth-enforced; P-A1 and P-A2 pass)",
+ "note": "Replay: node oneshot3-auth.mjs (needs @modelcontextprotocol/sdk@1.32.2, zod, express)"
+}

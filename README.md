@@ -69,3 +69,13 @@ Verdicts: `unauthenticated-surface` / `stateless-no-session` / `bound-or-inconcl
 Guigui Wang — Correctover · wangguigui@correctover.com
 
 *License: CC BY 4.0 (docs) / MIT (code). All targets in published studies were self-operated reference deployments unless noted; no third-party systems tested without authorization. Not first discovery of the pattern; contribution is protocol, matrix, and binding path.*
+
+## Evidence map (2026-11-16)
+
+- `DEFINITION.md` — formal definition + verdict labels (Phase 1 locked)
+- `INVENTION-ROADMAP.md` — 90-day plan, pre-registered success criteria (reconciliation 2027-02-14), evidence-tier discipline
+- `PHASE1-COUNTEREXAMPLES.md` — CX register; **Phase 1 CLOSED 2026-11-16** (CX-1 TS + CX-3 Python, both auth-enforced)
+- `SBSR.md` — Phase 2 design v0.2 + TV-B1..B5 falsifiable vectors + dual-verifier gate
+- `evidence/cx1-ts-sdk/` — TS SDK 1.32.2 dynamic verdict (measured dynamic)
+- `evidence/cx3-python-sdk/` — Python SDK 2.3.0 dynamic pack (measured dynamic)
+- `evidence/sbsr/` — fixtures (17) + dual verifiers + battery-results.json (zero disagreements)

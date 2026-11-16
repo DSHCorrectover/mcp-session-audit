@@ -1,0 +1,7 @@
+StreamableHTTP session manager started
+Created new transport with session ID: a391c42e270444aa8e91abc9cbb6001c
+Terminating session: a391c42e270444aa8e91abc9cbb6001c
+Created new transport with session ID: 7d885027f39842b4a67aa021a3148430
+Created new transport with session ID: 06a5b33c3286454aa5fbf1ba35e39358
+Terminating session: 7d885027f39842b4a67aa021a3148430
+Rejected request with unknown or expired session ID: 7d885027f39842b4a67aa021a3148430

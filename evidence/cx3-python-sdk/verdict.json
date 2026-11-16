@@ -1,0 +1,54 @@
+{
+ "target": "python-mcp-sdk 2.3.0 self-operated localhost",
+ "date": "2026-11-16",
+ "results": [
+  {
+   "label": "P-A0 no-token",
+   "status": 401,
+   "sid_out": null,
+   "body": "{\"error\":\"unauthorized\"}"
+  },
+  {
+   "label": "P-A0 bad-token",
+   "status": 401,
+   "sid_out": null,
+   "body": "{\"error\":\"unauthorized\"}"
+  },
+  {
+   "label": "V-init",
+   "status": 200,
+   "sid_out": "7d885027f39842b4a67aa021a3148430",
+   "body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"capabilities\":{\"prompts\":{\"listChanged\":false},\"resources\":{\"listChanged\":false,\"subscribe\":false},\"tools\":{\"listChanged\":false}},\"protocolVersion\":\"2025-06-18\",\"serverInfo\":{\"name\":\"cx3-python-sdk\",\"version\":\"2.3.0\"}}}\r\n\r\n"
+  },
+  {
+   "label": "A-init",
+   "status": 200,
+   "sid_out": "06a5b33c3286454aa5fbf1ba35e39358",
+   "body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"capabilities\":{\"prompts\":{\"listChanged\":false},\"resources\":{\"listChanged\":false,\"subscribe\":false},\"tools\":{\"listChanged\":false}},\"protocolVersion\":\"2025-06-18\",\"serverInfo\":{\"name\":\"cx3-python-sdk\",\"version\":\"2.3.0\"}}}\r\n\r\n"
+  },
+  {
+   "label": "CONTROL V+self",
+   "status": 200,
+   "sid_out": "7d885027f39842b4a67aa021a3148430",
+   "body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":9,\"result\":{\"content\":[{\"text\":\"executed note=victim self\",\"type\":\"text\"}],\"isError\":false,\"structuredContent\":{\"result\":\"executed note=victim self\"}}}\r\n\r\n"
+  },
+  {
+   "label": "P-A1 A-tools/call-on-sidV",
+   "status": 200,
+   "sid_out": "7d885027f39842b4a67aa021a3148430",
+   "body": "event: message\r\ndata: {\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"content\":[{\"text\":\"executed note=P-A1 marker from attacker subject\",\"type\":\"text\"}],\"isError\":false,\"structuredContent\":{\"result\":\"executed note=P-A1 marker from attacker subject\"}}}\r\n\r\n"
+  },
+  {
+   "label": "P-A2 A-DELETE-sidV",
+   "status": 200,
+   "sid_out": "7d885027f39842b4a67aa021a3148430",
+   "body": ""
+  },
+  {
+   "label": "P-A2b V-self-after-A-kill",
+   "status": 404,
+   "sid_out": null,
+   "body": "{\"jsonrpc\":\"2.0\",\"id\":null,\"error\":{\"code\":-32600,\"message\":\"Session not found\"}}"
+  }
+ ]
+}

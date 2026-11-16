@@ -4,6 +4,7 @@ Version 2026-11-12 (v0.1, evolving). Columns per PROTOCOL.md. Every "measured" c
 
 | Implementation | Deployment mode | Session header? | Auth enforced (P-A0)? | Binds subject (P-A1)? | DELETE re-auth (P-A2)? | Attribution default (P-Q1) | Remediation strategy | Status |
 |---|---|---|---|---|---|---|---|---|
+| **Python SDK 2.3.0** (official) | stateful (streamable HTTP) | yes (32-hex) | yes (measured dynamic 401 control) | **NO — measured dynamic, cross-subject tools/call 200** | **NO — measured dynamic, cross-subject DELETE 200 + victim 404** | by session → **privilege escalation** | upstream: TBD | measured (dynamic), evidence/cx3-python-sdk/ |
 | **TypeScript SDK 1.32.2** (official) | stateful (reference wiring) | yes (UUIDv4) | yes (measured 401 control) | **NO — measured** | **NO — measured 200+lockout** | by session → **privilege escalation** | upstream: TBD (issue pending) | measured |
 | TypeScript SDK 1.32.2 | stateless | no | yes | n/a — **no boundary at all; tool exec with zero handshake measured** | n/a | by session | — | measured |
 | TypeScript SDK 1.32.2 | resumability (eventStore) | yes | yes | **NO — measured** | — | by session | — | measured (partial) |

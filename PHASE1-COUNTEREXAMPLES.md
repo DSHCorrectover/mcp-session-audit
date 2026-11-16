@@ -33,7 +33,11 @@ Target for Phase 1 close: **≥3** independent, documented counterexamples of Se
 
 ---
 
-## CX-3 — Slot open (required for Phase 1 close)
+## CX-3 — Official Python MCP SDK 2.3.0 (FILLED 2026-11-16)
+
+> **Filled**: dynamic evidence landed in `evidence/cx3-python-sdk/` (verdict: Session-as-Identity, auth-enforced; P-A1 200 + P-A2 200 + victim 404 post-kill). Original slot text below.
+
+## CX-3 (slot archive) — Slot open (required for Phase 1 close)
 
 | Field | Value |
 |-------|--------|

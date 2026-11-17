@@ -1,5 +1,7 @@
 # mcp-session-audit
 
+[**Commercial verification engagements — USD 8,000–15,000, court-ready dossier**](https://dshcorrectover.github.io/correctover-recovery-admission/services.html) · [**Independent audit & conformance**](https://dshcorrectover.github.io/correctover-recovery-admission/services.html)
+
 **Naming the "Session-as-Identity" antinomy — and giving every MCP server a free checkup.**
 
 > **The claim**: MCP conflates a *session routing identifier* (`Mcp-Session-Id`) with a *security subject identifier*. This architectural antinomy — **Session-as-Identity** — explains an entire defect class across SDKs and deployments. We provide a cross-implementation test protocol, a replayable audit suite, and a remediation matrix.

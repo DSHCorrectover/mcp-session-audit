@@ -1,0 +1,135 @@
+{
+ "sweep": "2026-11-18 mcp.so remote-servers directory (pages 1-5), 95 candidates",
+ "method": "one benign initialize POST per endpoint; no follow-up requests; no injection; no state change",
+ "totals": {
+  "candidates": 95,
+  "red_anonymous_init": 25
+ },
+ "red": [
+  {
+   "name": "agentery",
+   "url": "https://agentery.com/api/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "alba-design-1cb91b",
+   "url": "https://alba.design/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "agentpixel",
+   "url": "https://agentpixel.io/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "andrii-co-washington-state-notary-apostille-assistant",
+   "url": "https://andrii.net/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: sse:data: {\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":"
+  },
+  {
+   "name": "air-pipe-0f2fa8",
+   "url": "https://api.airpipe.io/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "agimem-2712c9",
+   "url": "https://agimem.dev/api/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: sse:event: message data: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\""
+  },
+  {
+   "name": "pumpview-solana-trading-live-data-for-ai-agents",
+   "url": "https://api.pumpview.fun/mcp/?pv_source=mcp_so",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "instantclips",
+   "url": "https://app.instantclips.ai/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "assistant-24-7",
+   "url": "https://assistant247.net/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "clipping-alpha-cd0ff1",
+   "url": "https://clippingalpha.com/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "companydata",
+   "url": "https://companydata.com/mcp/",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "getsavitools-17289d",
+   "url": "https://getsavitools.com/api/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "hunter-killer",
+   "url": "https://hunterkiller.io/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "listinggood-mcp",
+   "url": "https://listinggood.com/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: sse:event: message\r data: {\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-03-26\""
+  },
+  {
+   "name": "liquidvision-crypto-derivatives-data",
+   "url": "https://liquidvision.app/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "apixo-ai-05d20d",
+   "url": "https://mcp.apixo.ai/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: sse:event: message data: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\""
+  },
+  {
+   "name": "litshrine",
+   "url": "https://litshrine.com/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "agendaforge-50742c",
+   "url": "https://mcp.agendaforge.app/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "default-privacy-8f365f",
+   "url": "https://mcp.defaultprivacy.com",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: sse:event: message data: {\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\""
+  },
+  {
+   "name": "quest-hire-a-human",
+   "url": "https://mcp.hireahuman.quest/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "etfiq",
+   "url": "https://mcp.etfiq.com",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "myssagent-social-security-claiming-estimator",
+   "url": "https://myssagent.com/api/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "openmark",
+   "url": "https://openmark.ai/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "internet-outage-checker-by-findbroadband",
+   "url": "https://www.findbroadbanddeals.com/api/mcp/outages",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  },
+  {
+   "name": "calderflow",
+   "url": "https://www.calderflow.com/mcp",
+   "evidence": "HTTP 200; mcp-session-id: absent; www-authenticate: absent; body: OK-INIT"
+  }
+ ]
+}

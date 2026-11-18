@@ -40,3 +40,16 @@ Same week as the scan above, the two largest coding-agent CLIs shipped organizat
 **Reading:** the client side is standardizing "the org decides which MCP surfaces exist". Registry- and client-side entry controls are converging — which pushes the residual risk to the plane neither covers: **already-established sessions and post-hoc accountability** (who ran which tool, with which credential, with what side effects). That residual plane is exactly what this repository's protocol targets (see PROTOCOL.md §session-subject binding; Session-as-Identity, PASSIVE-OBSERVATIONS.md).
 
 Sources: agentvera.dev/en/agent-changelog (2026-11-13 entries); havoptic.com changelog mirror. Passive observation — no client probing performed.
+
+## Sweep v0.2 (2026-11-18) — mcp.so remote-servers directory
+
+95 candidates from pages 1-5 of the mcp.so remote-servers directory. Same passive method as v0.1: **one benign `initialize` per endpoint, no follow-up requests, no injection, no state change.**
+
+| Class | Count | Reading |
+|---|---|---|
+| **Anonymous init OK (no session header, no auth challenge)** | **25 (26%)** | Same registry-class branch: identity never established. Sampled 2026-11-18, including live trading/financial agents. |
+| Remaining classes | 70 | OAuth-gated / 401 / unreachable / timeouts (breakdown pending per-endpoint tagging) |
+
+Notes: the 26% figure is a floor — directory pages 1-5 only. Financial-adjacent endpoints (e.g. Solana trading agents) appear in the anonymous-OK class, same as v0.1's finding that the dominant exposure is "no identity at all".
+
+Raw data: `radar-evidence-20261118.json` (this commit).

@@ -5,7 +5,7 @@
  "claims": [
   {
    "claim": "qc-gate.py as committed",
-   "file": "/tmp/qc-release/qc/qc-gate.py",
+   "file": "qc/qc-gate.py",
    "expected_sha": "177123d1e41eea0d3b29e42a00b8f254294b0a49f03d335f2170f5f6f026e394",
    "expected_size": 6931,
    "provenance": "committed in this repo",

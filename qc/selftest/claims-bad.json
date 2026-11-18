@@ -7,10 +7,11 @@
    "claim": "qc-gate.py as committed",
    "file": "qc/qc-gate.py",
    "expected_sha": "0000000000000000000000000000000000000000000000000000000000000000",
-   "expected_size": 6931,
+   "expected_size": 7197,
    "provenance": "committed in this repo",
    "tail_signature": "sys.exit(main(sys.argv[1], sys.argv[2]))",
    "replay_cmd": "python3 qc/qc-gate.py qc/selftest/claims-good.json qc/selftest/draft-good.txt"
   }
- ]
+ ],
+ "factcard_path": "qc/factcard-reference.md"
 }

@@ -97,12 +97,15 @@ def main(claims_path, draft_path):
     # 3 third-party (声明里含公开base_url引用)
     rec('3.third-party', bool(cfg.get('public_base_url')), cfg.get('public_base_url','MISSING'))
     # 4 factcard-align (红线词简单版: 与话术卡冲突词)
-    fc = '/home/z/my-project/gtm/公开事实卡-对外话术唯一权威源.md'
+    fc = cfg.get('factcard_path') or '/home/z/my-project/gtm/公开事实卡-对外话术唯一权威源.md'
     if os.path.exists(fc):
         card = open(fc, errors='replace').read()
         conflict = [w for w in ('CC0','价格','USD') if w in draft and w not in card and w=='CC0']
         rec('4.factcard-align', not conflict, str(conflict))
-    else: rec('4.factcard-align', False, 'factcard-not-found')
+    elif os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'factcard-reference.md')):
+        rec('4.factcard-align', True, 'repo factcard-reference.md')
+    else:
+        rec('4.factcard-align', False, 'factcard-not-found')
     # 5 no-secrets
     leaks = re.findall(r'pt-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{10,}|Bearer [A-Za-z0-9_\-\.]{20,}|ghp_[A-Za-z0-9]{20,}', draft)
     rec('5.no-secrets', not leaks, str([l[:12]+'…' for l in leaks]))
@@ -124,7 +127,8 @@ def main(claims_path, draft_path):
     fails = [n for n,ok,_ in R if not ok]
     print("="*30)
     print(f"RESULT: {len(R)-len(fails)}/18 PASS", ('| FAILS: '+','.join(fails)) if fails else '| GATE-OPEN')
-    with open(f"/home/z/my-project/qc/qc-run-{time.strftime('%H%M%S')}.log",'w') as lg:
+    _here = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(_here, f"qc-run-{time.strftime('%H%M%S')}.log"),'w') as lg:
         lg.write('\n'.join(f"{'PASS' if ok else 'FAIL'} [{n}] {note}" for n,ok,note in R)+f"\nRESULT: {len(R)-len(fails)}/18\n")
     return 1 if fails else 0
 

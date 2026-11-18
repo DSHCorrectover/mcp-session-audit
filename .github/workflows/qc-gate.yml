@@ -1,0 +1,27 @@
+name: qc-gate-9x9
+
+on:
+  push:
+    paths: ['qc/**', '.github/workflows/qc-gate.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 9+9 gate self-test (good claim must PASS)
+        run: python3 qc/qc-gate.py qc/selftest/claims-good.json qc/selftest/draft-good.txt
+      - name: tamper-deny (bad claim MUST be rejected — asserts the gate actually catches)
+        run: |
+          if python3 qc/qc-gate.py qc/selftest/claims-bad.json qc/selftest/draft-good.txt; then
+            echo "GATE FAILED TO CATCH TAMPERING"; exit 1
+          else
+            echo "tamper correctly rejected"; exit 0
+          fi

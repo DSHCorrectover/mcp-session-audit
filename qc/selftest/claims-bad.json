@@ -1,0 +1,16 @@
+{
+ "public_base_url": "https://raw.githubusercontent.com/DSHCorrectover/mcp-session-audit/main/qc/qc-gate.py",
+ "scope_note": "self-test: all checks must pass",
+ "first_publication": true,
+ "claims": [
+  {
+   "claim": "qc-gate.py as committed",
+   "file": "/tmp/qc-release/qc/qc-gate.py",
+   "expected_sha": "0000000000000000000000000000000000000000000000000000000000000000",
+   "expected_size": 6931,
+   "provenance": "committed in this repo",
+   "tail_signature": "sys.exit(main(sys.argv[1], sys.argv[2]))",
+   "replay_cmd": "python3 qc/qc-gate.py qc/selftest/claims-good.json qc/selftest/draft-good.txt"
+  }
+ ]
+}

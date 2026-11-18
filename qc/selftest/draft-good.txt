@@ -1,0 +1,1 @@
+Self-test draft: scope is documented; replay command present; no prices; no CVE counts.
